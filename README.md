@@ -54,3 +54,7 @@ docker container rm docker-linux-dev-box
 ## Pipeline & Docker Hub
 
 The dockerfile is build and deployed using [GitHub Actions](https://docs.github.com/en/actions), specifically using the docker [build-push-action](https://github.com/docker/build-push-action)
+
+## TODO's
+
+* Fix ruby. RVM isn't happy right now.
