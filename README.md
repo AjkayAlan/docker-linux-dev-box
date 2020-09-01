@@ -10,6 +10,7 @@ I wanted to create a docker container I can use to do most software development 
 
 * Install [Docker](https://www.docker.com/get-started)
 * Clone the repo
+* Switch your preferred terminal to use a [nerdfont](https://github.com/ryanoasis/nerd-fonts). I personally like [Cascadia Code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/CascadiaCode)
 
 ## Building
 
