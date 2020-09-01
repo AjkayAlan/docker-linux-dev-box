@@ -1,6 +1,7 @@
 FROM debian:buster
 
 ADD scripts /tmp/scripts
+RUN ["chmod", "-R", "ugo+rwx", "/tmp/scripts"]
 
 # Fix Locales
 RUN /tmp/scripts/fix-locales.sh
