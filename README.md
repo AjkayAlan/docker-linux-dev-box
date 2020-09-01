@@ -24,7 +24,7 @@ docker build -t ajkayalan/docker-linux-dev-box:latest .
 After building, you need to run the container in detached mode:
 
 ```sh
-docker run --name docker-linux-dev-box -d ajkayalan/docker-linux-dev-box:latest
+docker run --name docker-linux-dev-box -t -d ajkayalan/docker-linux-dev-box:latest
 ```
 
 ## Destroying
@@ -33,7 +33,7 @@ If you do something bad and need to start from scratch, just destroy the contain
 
 ```sh
 docker container stop $(docker container ls -q --filter name=docker-linux-dev-box)
-docker container docker-linux-dev-box
+docker container rm docker-linux-dev-box
 ```
 
 ## Pipeline & Docker Hub
