@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - master
+    paths:
+      - Dockerfile
+  schedule:
+    - cron:  '0 11 * * 0'
 defaults:
   run:
     shell: bash
