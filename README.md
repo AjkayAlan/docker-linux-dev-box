@@ -1,6 +1,6 @@
 # docker-linux-dev-box
 
-Creates a linux development environment with docker that has most nice things installed
+Creates a linux development environment with docker that has most nice things installed. Source code located on [github](https://github.com/AjkayAlan/docker-linux-dev-box)
 
 ## Purpose
 
@@ -14,7 +14,7 @@ I wanted to create a docker container I can use to do most software development 
 
 ## Building
 
-Easy enough, run the following:
+Easy enough, run the following after cloning the source code:
 
 ```sh
 docker build -t ajkayalan/docker-linux-dev-box:latest .
@@ -22,7 +22,13 @@ docker build -t ajkayalan/docker-linux-dev-box:latest .
 
 ## Running
 
-After building, you need to run the container in detached mode:
+If you haven't built locally but want to use the image, run:
+
+```sh
+docker pull ajkayalan/docker-linux-dev-box
+```
+
+After pulling or building, you need to run the container in detached mode:
 
 ```sh
 docker run --name docker-linux-dev-box -t -d ajkayalan/docker-linux-dev-box:latest
@@ -30,8 +36,9 @@ docker run --name docker-linux-dev-box -t -d ajkayalan/docker-linux-dev-box:late
 
 ## Getting Terminal Access
 
-Simply open a shell in interactive:
-```
+Simply open a shell in interactive mode:
+
+```sh
 docker exec -it docker-linux-dev-box zsh
 ```
 
