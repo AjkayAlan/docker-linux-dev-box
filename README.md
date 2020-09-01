@@ -27,6 +27,13 @@ After building, you need to run the container in detached mode:
 docker run --name docker-linux-dev-box -t -d ajkayalan/docker-linux-dev-box:latest
 ```
 
+## Getting Terminal Access
+
+Simply open a shell in interactive:
+```
+docker exec -it docker-linux-dev-box zsh
+```
+
 ## Destroying
 
 If you do something bad and need to start from scratch, just destroy the container:
