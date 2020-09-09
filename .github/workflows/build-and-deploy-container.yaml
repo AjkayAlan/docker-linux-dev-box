@@ -16,11 +16,20 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Build And Push To Dockerhub
-        uses: docker/build-push-action@v1
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: ajkayalan/docker-linux-dev-box
-          tag_with_ref: true
-          tag_with_sha: true
+      - name: Get CalVer
+        run: |
+          CalVer=$(date '+%Y.%m.%d')
+          echo "::set-env name=CalVer::$CalVer"
+      - name: Echo CalVer
+        run: |
+          echo $CalVer
+      # - name: Build And Push To Dockerhub
+      #   uses: docker/build-push-action@v1
+      #   with:
+      #     username: ${{ secrets.DOCKER_USERNAME }}
+      #     password: ${{ secrets.DOCKER_PASSWORD }}
+      #     repository: ajkayalan/docker-linux-dev-box
+      #     tag_with_ref: true
+      #     tag_with_sha: true
+      #     tags: |
+      #       ajkayalan/docker-linux-dev-box:$CalVer
