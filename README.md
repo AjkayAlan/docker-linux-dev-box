@@ -57,4 +57,4 @@ The dockerfile is build and deployed using [GitHub Actions](https://docs.github.
 
 ## TODO's
 
-* Fix ruby. RVM isn't happy right now.
+* Fix ruby. RVM isn't happy right now. Not sure why, but something to do with running as root?
