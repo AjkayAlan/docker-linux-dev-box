@@ -16,7 +16,8 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binsc
 source ~/.zshrc
 
 # Install go
-gvm install go1.14 --binary
-gvm use go1.14 --default
+latest_gvm="$(gvm listall | grep -o 'go[0-9]\{1,\}\.[0-9]\{1,\}$' | sort --version-sort | tail -n1)"
+gvm install $latest_gvm --binary
+gvm use $latest_gvm --default
 gvm pkgset create default
 gvm pkgset use default

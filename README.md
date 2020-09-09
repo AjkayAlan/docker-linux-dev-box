@@ -58,3 +58,5 @@ The dockerfile is build and deployed using [GitHub Actions](https://docs.github.
 ## TODO's
 
 * Fix ruby. RVM isn't happy right now. Not sure why, but something to do with running as root?
+* Don't pin a specific version of Java, get latest LTS instead
+* Don't pin a specific version of .NET Core, get latest LTS instead
