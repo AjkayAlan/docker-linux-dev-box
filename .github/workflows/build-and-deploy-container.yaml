@@ -17,9 +17,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Get CalVer
+        id: get_calver
         run: |
           CalVer=$(date '+%Y.%m.%d')
-          echo "::set-env name=CalVer::$CalVer"
+          echo "::set-output name=CalVer::$CalVer"
       - name: Build And Push To Dockerhub
         uses: docker/build-push-action@v1
         with:
@@ -29,4 +30,4 @@ jobs:
           tag_with_ref: true
           tag_with_sha: true
           tags: |
-            ajkayalan/docker-linux-dev-box:$CalVer
+            ajkayalan/docker-linux-dev-box:${{ steps.get_calver.outputs.CalVer }}
