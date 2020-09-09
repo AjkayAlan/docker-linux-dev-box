@@ -24,6 +24,7 @@ RUN /tmp/scripts/fix-locales.sh && \
     /tmp/scripts/install-awscli.sh && \
     rm -rf /var/lib/apt/lists/*
 
+# To Fix
 # RUN /tmp/scripts/install-rvm-ruby.sh
 
 CMD ["zsh"]
