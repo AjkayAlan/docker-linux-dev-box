@@ -17,7 +17,7 @@ RUN /tmp/scripts/fix-locales.sh && \
     /tmp/scripts/install-nodenv-node.sh && \
     /tmp/scripts/install-pyenv-python.sh && \
     /tmp/scripts/install-rbenv-ruby.sh && \
-    /tmp/scripts/install-gvm-go.sh && \
+    /tmp/scripts/install-goenv-go.sh && \
     /tmp/scripts/install-sdkman.sh && \
     /tmp/scripts/install-jabba-java.sh && \
     /tmp/scripts/install-netcore.sh && \
