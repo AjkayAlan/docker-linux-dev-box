@@ -47,7 +47,7 @@ docker exec -it docker-linux-dev-box zsh
 If you do something bad and need to start from scratch, just destroy the container:
 
 ```sh
-docker container stop $(docker container ls -q --filter name=docker-linux-dev-box)
+docker container stop docker-linux-dev-box
 docker container rm docker-linux-dev-box
 ```
 
@@ -57,6 +57,5 @@ The dockerfile is build and deployed using [GitHub Actions](https://docs.github.
 
 ## TODO's
 
-* Fix ruby. RVM isn't happy right now. Not sure why, but something to do with running as root?
 * Don't pin a specific version of Java, get latest LTS instead
 * Don't pin a specific version of .NET Core, get latest LTS instead

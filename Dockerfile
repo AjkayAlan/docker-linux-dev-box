@@ -16,6 +16,7 @@ RUN /tmp/scripts/fix-locales.sh && \
     /tmp/scripts/install-zsh.sh && \
     /tmp/scripts/install-nvm-node.sh && \
     /tmp/scripts/install-pyenv-python.sh && \
+    /tmp/scripts/install-rbenv-ruby.sh && \
     /tmp/scripts/install-gvm-go.sh && \
     /tmp/scripts/install-sdkman.sh && \
     /tmp/scripts/install-jabba-java.sh && \
@@ -23,8 +24,5 @@ RUN /tmp/scripts/fix-locales.sh && \
     /tmp/scripts/install-powershell-core.sh && \
     /tmp/scripts/install-awscli.sh && \
     rm -rf /var/lib/apt/lists/*
-
-# TODO
-# RUN /tmp/scripts/install-rvm-ruby.sh
 
 CMD ["zsh"]
