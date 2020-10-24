@@ -18,8 +18,7 @@ RUN /tmp/scripts/fix-locales.sh && \
     /tmp/scripts/install-pyenv-python.sh && \
     /tmp/scripts/install-rbenv-ruby.sh && \
     /tmp/scripts/install-goenv-go.sh && \
-    /tmp/scripts/install-sdkman.sh && \
-    /tmp/scripts/install-jabba-java.sh && \
+    /tmp/scripts/install-sdkman-java.sh && \
     /tmp/scripts/install-netcore.sh && \
     /tmp/scripts/install-powershell-core.sh && \
     /tmp/scripts/install-awscli.sh && \
