@@ -58,4 +58,3 @@ The dockerfile is build and deployed using [GitHub Actions](https://docs.github.
 ## TODO's
 
 * Don't pin a specific version of .NET Core, get latest LTS instead
-* Fix PowerShell Core
