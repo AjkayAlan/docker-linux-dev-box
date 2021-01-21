@@ -11,9 +11,9 @@ zsh
 chsh -s $(which zsh)
 
 # Install a nerdfont
-mkdir -p ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/CascadiaCode/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete.ttf -P ~/.local/share/fonts
-fc-cache -vf ~/.local/share/fonts/
+mkdir -p /usr/share/fonts/opentype
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/CascadiaCode/Regular/complete/Caskaydia%20Cove%20Regular%20Nerd%20Font%20Complete.otf -P /usr/share/fonts/opentype
+fc-cache -f -v
 
 # Install powerlevel9k
 if [ ! -d "~/.oh-my-zsh/custom/themes/powerlevel9k" ] ; then
