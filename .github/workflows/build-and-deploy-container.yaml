@@ -44,5 +44,5 @@ jobs:
           tags: |
             ajkayalan/docker-linux-dev-box:latest
             ajkayalan/docker-linux-dev-box:${{ steps.get_calver.outputs.CalVer }}
-            ghcr.io/${{ GITHUB_REPOSITORY }}:latest
-            ghcr.io/${{ GITHUB_REPOSITORY }}:${{ steps.get_calver.outputs.CalVer }}
+            ghcr.io/ajkayalan/docker-linux-dev-box:latest
+            ghcr.io/ajkayalan/docker-linux-dev-box:${{ steps.get_calver.outputs.CalVer }}
