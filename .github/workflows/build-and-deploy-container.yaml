@@ -11,7 +11,7 @@ defaults:
   run:
     shell: bash
 jobs:
-  build-linux-box:
+  build-linux-box-dockerhub:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -37,3 +37,25 @@ jobs:
           tags: |
             ajkayalan/docker-linux-dev-box:latest
             ajkayalan/docker-linux-dev-box:${{ steps.get_calver.outputs.CalVer }}
+  build-linux-box-ghcr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Get CalVer
+        id: get_calver
+        run: |
+          CalVer=$(date '+%Y.%m.%d')
+          echo "::set-output name=CalVer::$CalVer"
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Build Docker Image
+        run: docker build -t ghcr.io/${GITHUB_REPOSITORY}:${IMAGE_TAG} .
+      - name: Login to GHCR
+        run: docker login -u publisher -p ${{ secrets.GITHUB_TOKEN }} ghcr.io
+      - name: Push Docker Image
+        run: |
+          docker push ghcr.io/${GITHUB_REPOSITORY}:${IMAGE_TAG}
+          docker push ghcr.io/${GITHUB_REPOSITORY}:${{ steps.get_calver.outputs.CalVer }}
