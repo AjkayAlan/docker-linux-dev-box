@@ -22,10 +22,16 @@ docker build -t ajkayalan/docker-linux-dev-box:latest .
 
 ## Running
 
-If you haven't built locally but want to use the image, run:
+If you haven't built locally but want to use the image, pull it from [Docker Hub](https://hub.docker.com/r/ajkayalan/docker-linux-dev-box):
 
 ```sh
 docker pull ajkayalan/docker-linux-dev-box
+```
+
+Alternatively, you can pull it from my [GitHub Container Registry](https://github.com/users/AjkayAlan/packages/container/package/docker-linux-dev-box):
+
+```sh
+docker pull ghcr.io/ajkayalan/docker-linux-dev-box
 ```
 
 After pulling or building, you need to run the container in detached mode:
