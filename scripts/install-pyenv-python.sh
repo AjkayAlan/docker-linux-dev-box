@@ -26,6 +26,7 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 
 # Initialize pyenv in shell
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 source ~/.zshrc
