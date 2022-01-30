@@ -13,8 +13,8 @@ apt install -y \
     man-db \
     nano \
     patch \
-    python-apt \
-    python-pycurl \
+    python3-apt \
+    python3-pycurl \
     sed \
     snapd \
     software-properties-common \

@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 # Add scripts to image to provision and grant execute
 ADD scripts /tmp/scripts
@@ -6,7 +6,7 @@ RUN chmod -R ugo+rwx /tmp/scripts
 
 # Fix locales
 RUN /tmp/scripts/fix-locales.sh
-ENV LANG en_US.UTF-8 
+ENV LANG en_US.UTF-8
 
 # Install everything
 RUN /tmp/scripts/fix-locales.sh && \
