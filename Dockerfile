@@ -14,7 +14,7 @@ RUN /tmp/scripts/fix-locales.sh && \
     /tmp/scripts/install-basics.sh && \
     /tmp/scripts/install-git.sh && \
     /tmp/scripts/install-zsh.sh && \
-    /tmp/scripts/install-nodenv-node.sh && \
+    /tmp/scripts/install-nvm-node.sh && \
     /tmp/scripts/install-pyenv-python.sh && \
     /tmp/scripts/install-rbenv-ruby.sh && \
     /tmp/scripts/install-goenv-go.sh && \
