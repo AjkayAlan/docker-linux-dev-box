@@ -57,6 +57,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v3
         with:
+          file: Dockerfile
           push: ${{ github.ref == 'refs/heads/main' }}
           tags: |
             ajkayalan/docker-linux-dev-box:latest
