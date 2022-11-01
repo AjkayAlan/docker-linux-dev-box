@@ -9,6 +9,7 @@ apt-get install -y \
     unzip
 
 # Install awscli
+source ~/.zshrc
 asdf plugin add awscli
 asdf install awscli latest
 asdf global awscli latest

@@ -7,6 +7,7 @@ apt-get install -y \
     tar
 
 # Install powershell-core
+source ~/.zshrc
 asdf plugin add powershell-core
 asdf install powershell-core latest
 asdf global powershell-core latest

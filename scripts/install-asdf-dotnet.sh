@@ -7,6 +7,7 @@ apt-get install -y \
     tar
 
 # Install dotnet
+source ~/.zshrc
 asdf plugin add dotnet
 asdf install dotnet latest
 asdf global dotnet latest

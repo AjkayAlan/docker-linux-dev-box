@@ -6,6 +6,7 @@ apt-get install -y \
     make
 
 # Install node
+source ~/.zshrc
 asdf plugin add nodejs
 asdf install nodejs lts
 asdf global nodejs lts
