@@ -4,12 +4,11 @@
 apt-get install -y zsh
 
 # Install Oh-My-Zsh
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Switch to zsh
 zsh
+chsh -s $(which zsh)
 
 # Install powerlevel10k
 if [ ! -d "~/.oh-my-zsh/custom/themes/powerlevel10k" ] ; then
