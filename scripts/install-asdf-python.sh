@@ -21,6 +21,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y \
     liblzma-dev
 
 # Install python
+source ~/.zshrc
 asdf plugin add python
 asdf install python latest
 asdf global python latest

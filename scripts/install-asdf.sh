@@ -4,6 +4,3 @@
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 sed -i 's/\(^plugins=([^)]*\)/\1 asdf/' ~/.zshrc
 source ~/.zshrc
-
-# Hack to make docker recognize asdf
-exec zsh
