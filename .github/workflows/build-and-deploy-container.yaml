@@ -2,7 +2,7 @@ name: Build Boxes
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - Dockerfile
   schedule:
