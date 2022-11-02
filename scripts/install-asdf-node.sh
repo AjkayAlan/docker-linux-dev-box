@@ -8,8 +8,8 @@ apt-get install -y \
 # Install node
 source ~/.zshrc
 asdf plugin add nodejs
-asdf install nodejs lts
-asdf global nodejs lts
+asdf install nodejs latest:18
+asdf global nodejs latest:18
 
 # Update npm
 npm install -g npm
