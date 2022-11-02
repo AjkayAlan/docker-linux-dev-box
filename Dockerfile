@@ -9,19 +9,23 @@ RUN /tmp/scripts/fix-locales.sh
 ENV LANG en_US.UTF-8
 
 # Install everything
-RUN /tmp/scripts/fix-locales.sh && \
-    /tmp/scripts/update-box.sh && \
-    /tmp/scripts/install-basics.sh && \
-    /tmp/scripts/install-git.sh && \
-    /tmp/scripts/install-zsh.sh && \
-    /tmp/scripts/install-nvm-node.sh && \
-    /tmp/scripts/install-pyenv-python.sh && \
-    /tmp/scripts/install-rbenv-ruby.sh && \
-    /tmp/scripts/install-goenv-go.sh && \
-    /tmp/scripts/install-sdkman-java.sh && \
-    /tmp/scripts/install-netcore.sh && \
-    /tmp/scripts/install-powershell-core.sh && \
-    /tmp/scripts/install-awscli.sh && \
-    rm -rf /var/lib/apt/lists/*
+RUN /tmp/scripts/fix-locales.sh
+RUN /tmp/scripts/update-box.sh
+RUN /tmp/scripts/install-basics.sh
+RUN /tmp/scripts/install-git.sh
+RUN /tmp/scripts/install-zsh.sh
+RUN /tmp/scripts/install-asdf.sh
+RUN /tmp/scripts/install-asdf-python.sh
+RUN /tmp/scripts/install-asdf-node.sh
+RUN /tmp/scripts/install-asdf-ruby.sh
+RUN /tmp/scripts/install-asdf-go.sh
+RUN /tmp/scripts/install-asdf-java.sh
+RUN /tmp/scripts/install-asdf-dotnet.sh
+RUN /tmp/scripts/install-asdf-powershell-core.sh
+RUN /tmp/scripts/install-asdf-rust.sh
+RUN /tmp/scripts/install-asdf-awscli.sh
+RUN /tmp/scripts/install-asdf-github-cli.sh
+RUN /tmp/scripts/install-asdf-terraform.sh
+RUN rm -rf /var/lib/apt/lists/*
 
 CMD ["zsh"]
