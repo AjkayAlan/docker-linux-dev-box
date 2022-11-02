@@ -22,5 +22,5 @@ apt-get install -y \
 # Install ruby
 source ~/.zshrc
 asdf plugin add ruby
-asdf install ruby latest
-asdf global ruby latest
+asdf install ruby latest:3
+asdf global ruby latest:3

@@ -3,5 +3,5 @@
 # Install go
 source ~/.zshrc
 asdf plugin add terraform
-asdf install terraform latest
-asdf global terraform latest
+asdf install terraform latest:1
+asdf global terraform latest:1

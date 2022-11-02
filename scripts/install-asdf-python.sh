@@ -23,8 +23,8 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # Install python
 source ~/.zshrc
 asdf plugin add python
-asdf install python latest
-asdf global python latest
+asdf install python latest:3
+asdf global python latest:3
 
 # Upgrade pip
 pip install --upgrade pip
