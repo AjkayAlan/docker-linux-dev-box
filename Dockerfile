@@ -22,6 +22,7 @@ RUN /tmp/scripts/install-asdf-go.sh
 RUN /tmp/scripts/install-asdf-java.sh
 RUN /tmp/scripts/install-asdf-dotnet.sh
 RUN /tmp/scripts/install-asdf-powershell-core.sh
+RUN /tmp/scripts/install-asdf-rust.sh
 RUN /tmp/scripts/install-asdf-awscli.sh
 RUN /tmp/scripts/install-asdf-github-cli.sh
 RUN /tmp/scripts/install-asdf-terraform.sh

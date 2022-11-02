@@ -65,8 +65,8 @@ test_gradle_isInstalled() {
 }
 
 test_mvn_isInstalled() {
-  result=`mvn --help`
-  assertContains "${result}" "usage: mvn [options]"
+  result=`mvn --version`
+  assertContains "${result}" "Apache Maven"
 }
 
 test_dotnet_isInstalled() {
